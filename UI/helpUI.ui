@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>helpWindow</class>
+ <widget class="QMainWindow" name="helpWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>892</width>
+    <height>549</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Окно помощи</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>60</y>
+      <width>445</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="helpLayout">
+     <item>
+      <widget class="QLabel" name="saveHelp">
+       <property name="text">
+        <string>Кнопка &quot;Сохранить&quot;:
+Сохраняет файл с базой данных
+формата .db в виде SQL таблицы
+в файле содержатся различные
+статистические данные, исходя из
+введенных данных.</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="IOHelp">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Помощь по формату ввода:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="IOInfo">
+         <item>
+          <widget class="QLabel" name="csvHelp">
+           <property name="text">
+            <string>При загрузке данных
+из .csv таблиц, используйте &quot;,&quot;
+в качестве разделителя данных.</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="txtHelp">
+           <property name="text">
+            <string>При вводе из файла .txt
+вводите только числа,
+в качестве разделителя
+используйте знак &quot;;&quot;.</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="csvLabel">
+         <property name="text">
+          <string>Пример таблицы формата .csv:
+title,data
+data_name,1;2;3;4;5</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Пример таблицы формата .txt:
+1;2;3;4;5</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

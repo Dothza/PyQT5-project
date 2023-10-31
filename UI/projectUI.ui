@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>786</width>
+    <height>701</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Сбор статистических данных</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>481</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="programLayout">
+     <item row="1" column="0">
+      <widget class="QPushButton" name="helpBtn">
+       <property name="text">
+        <string>Помощь</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <layout class="QHBoxLayout" name="IOLayout">
+       <item>
+        <layout class="QVBoxLayout" name="outputLayout">
+         <item>
+          <widget class="QLabel" name="nameLabel">
+           <property name="text">
+            <string>Введите имя файла:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="nameEdit">
+           <property name="inputMask">
+            <string/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Normal</enum>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="saveBtn">
+           <property name="text">
+            <string>Сохранить</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="inputLayout">
+         <item>
+          <widget class="QLabel" name="inpLabel">
+           <property name="text">
+            <string>Выберите формат ввода:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="allSelectorLayout">
+           <item>
+            <layout class="QVBoxLayout" name="filesLayout">
+             <item>
+              <widget class="QRadioButton" name="csvFileBtn">
+               <property name="text">
+                <string>Файл формата .csv</string>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">fileSelect</string>
+               </attribute>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="txtFileBtn">
+               <property name="text">
+                <string>Файл формата .txt</string>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">fileSelect</string>
+               </attribute>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="selectorLayout">
+             <item>
+              <widget class="QPushButton" name="csvInput">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Выберите файл .csv</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="txtInput">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Выберите файл .txt</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="fileSelect"/>
+ </buttongroups>
+</ui>
