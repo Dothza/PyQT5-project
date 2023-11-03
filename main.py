@@ -53,7 +53,9 @@ class DataStatistics(QMainWindow, Ui_mainWindow):
                 self.btnSel[i].setEnabled(False)
 
     def get_data(self):
+
         self.f_data = []
+
         if self.sender() == self.csvInput:
             self.file_name = QFileDialog.getOpenFileName(self, "Выберите файл", "",
                                                          "Таблица (*.csv)")[0]
@@ -87,47 +89,57 @@ class DataStatistics(QMainWindow, Ui_mainWindow):
                 msg.exec_()
 
     def save_table(self):
-        data_table = self.statistics_data(self.f_data)
-        if data_table:
-            con = sql.connect(f"tables/{self.nameEdit.text()}.db")
+        options = QFileDialog.Options()
+        self.file_path = QFileDialog.getExistingDirectory(self, "Выберите папку", options=options)
+        if self.file_path:
+            data_table = self.statistics_data(self.f_data)
+            if data_table:
+                con = sql.connect(f"{self.file_path}/{self.nameEdit.text()}.db")
 
-            cur = con.cursor()
+                cur = con.cursor()
 
-            cur.execute("""CREATE TABLE IF NOT EXISTS statistics_data
-                (id INTEGER PRIMARY KEY AUTOINCREMENT,
-                'Путь до данных' TEXT, 
-                'Среднее арифметическое' REAL, 
-                'Минимум' REAL,
-                'Максимум' REAL, 
-                'Размах' REAL,
-                'Медиана' REAL, 
-                'Мода' REAL,
-                'Дисперсия' REAL)""")
+                cur.execute("""CREATE TABLE IF NOT EXISTS statistics_data
+                        (id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        'Путь до данных' TEXT, 
+                        'Среднее арифметическое' REAL, 
+                        'Минимум' REAL,
+                        'Максимум' REAL, 
+                        'Размах' REAL,
+                        'Медиана' REAL, 
+                        'Мода' REAL,
+                        'Дисперсия' REAL)""")
 
-            # Вставка данных в таблицу
-            cur.execute("""INSERT INTO statistics_data ('Путь до данных', 
-                'Среднее арифметическое', 
-                'Минимум',
-                'Максимум',
-                'Размах',
-                'Медиана', 
-                'Мода',
-                'Дисперсия')
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
-                        (self.file_name, data_table[0], data_table[1], data_table[2], data_table[3],
-                         data_table[4], data_table[5], data_table[6]))
+                # Вставка данных в таблицу
+                cur.execute("""INSERT INTO statistics_data ('Путь до данных', 
+                        'Среднее арифметическое', 
+                        'Минимум',
+                        'Максимум',
+                        'Размах',
+                        'Медиана', 
+                        'Мода',
+                        'Дисперсия')
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+                            (self.file_name, data_table[0], data_table[1], data_table[2], data_table[3],
+                             data_table[4], data_table[5], data_table[6]))
 
-            con.commit()
-            con.close()
-            msg = QMessageBox()
-            msg.setWindowTitle("Успешно")
-            msg.setText("Успех: данные сохранены")
-            msg.setIcon(QMessageBox.Information)
-            msg.exec_()
+                con.commit()
+                con.close()
+                msg = QMessageBox()
+                msg.setWindowTitle("Успешно")
+                msg.setText("Успех: данные сохранены")
+                msg.setIcon(QMessageBox.Information)
+                msg.exec_()
+            else:
+                msg = QMessageBox()
+                msg.setWindowTitle("Ошибка")
+                msg.setText("Ошибка: нет данных")
+                msg.setIcon(QMessageBox.Critical)
+                msg.exec_()
+
         else:
             msg = QMessageBox()
             msg.setWindowTitle("Ошибка")
-            msg.setText("Ошибка: нет данных")
+            msg.setText("Ошибка: нет директории")
             msg.setIcon(QMessageBox.Critical)
             msg.exec_()
 
