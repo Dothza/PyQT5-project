@@ -14,29 +14,45 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_helpWindow(object):
     def setupUi(self, helpWindow):
         helpWindow.setObjectName("helpWindow")
-        helpWindow.resize(892, 549)
+        helpWindow.resize(600, 500)
         self.centralwidget = QtWidgets.QWidget(helpWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayoutWidget_2 = QtWidgets.QWidget(self.centralwidget)
-        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(30, 60, 445, 221))
+        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(10, 10, 581, 474))
         self.verticalLayoutWidget_2.setObjectName("verticalLayoutWidget_2")
         self.helpLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_2)
         self.helpLayout.setContentsMargins(0, 0, 0, 0)
         self.helpLayout.setObjectName("helpLayout")
         self.saveHelp = QtWidgets.QLabel(self.verticalLayoutWidget_2)
+        font = QtGui.QFont()
+        font.setFamily("Oswald Light")
+        font.setPointSize(14)
+        self.saveHelp.setFont(font)
         self.saveHelp.setObjectName("saveHelp")
         self.helpLayout.addWidget(self.saveHelp)
         self.IOHelp = QtWidgets.QVBoxLayout()
         self.IOHelp.setObjectName("IOHelp")
         self.label = QtWidgets.QLabel(self.verticalLayoutWidget_2)
+        font = QtGui.QFont()
+        font.setFamily("Oswald Light")
+        font.setPointSize(14)
+        self.label.setFont(font)
         self.label.setObjectName("label")
         self.IOHelp.addWidget(self.label)
         self.IOInfo = QtWidgets.QHBoxLayout()
         self.IOInfo.setObjectName("IOInfo")
         self.csvHelp = QtWidgets.QLabel(self.verticalLayoutWidget_2)
+        font = QtGui.QFont()
+        font.setFamily("Oswald Light")
+        font.setPointSize(14)
+        self.csvHelp.setFont(font)
         self.csvHelp.setObjectName("csvHelp")
         self.IOInfo.addWidget(self.csvHelp)
         self.txtHelp = QtWidgets.QLabel(self.verticalLayoutWidget_2)
+        font = QtGui.QFont()
+        font.setFamily("Oswald Light")
+        font.setPointSize(14)
+        self.txtHelp.setFont(font)
         self.txtHelp.setObjectName("txtHelp")
         self.IOInfo.addWidget(self.txtHelp)
         self.IOHelp.addLayout(self.IOInfo)
@@ -44,9 +60,17 @@ class Ui_helpWindow(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.csvLabel = QtWidgets.QLabel(self.verticalLayoutWidget_2)
+        font = QtGui.QFont()
+        font.setFamily("Oswald Light")
+        font.setPointSize(14)
+        self.csvLabel.setFont(font)
         self.csvLabel.setObjectName("csvLabel")
         self.horizontalLayout.addWidget(self.csvLabel)
         self.label_2 = QtWidgets.QLabel(self.verticalLayoutWidget_2)
+        font = QtGui.QFont()
+        font.setFamily("Oswald Light")
+        font.setPointSize(14)
+        self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.horizontalLayout.addWidget(self.label_2)
         self.helpLayout.addLayout(self.horizontalLayout)
@@ -66,16 +90,14 @@ class Ui_helpWindow(object):
 "введенных данных."))
         self.label.setText(_translate("helpWindow", "Помощь по формату ввода:"))
         self.csvHelp.setText(_translate("helpWindow", "При загрузке данных\n"
-"из .csv таблиц, используйте \";\"\n"
-"в качестве разделителя данных.\n"
-"Используйте только в соответствии \n"
-"с примером!"))
+"из .csv таблиц, используйте \",\"\n"
+"в качестве разделителя данных."))
         self.txtHelp.setText(_translate("helpWindow", "При вводе из файла .txt\n"
 "вводите только числа,\n"
 "в качестве разделителя\n"
 "используйте знак \";\"."))
         self.csvLabel.setText(_translate("helpWindow", "Пример таблицы формата .csv:\n"
-"title;data\n"
-"data_name;data,data1,data2"))
+"title,data\n"
+"data_name,1;2;3;4;5"))
         self.label_2.setText(_translate("helpWindow", "Пример таблицы формата .txt:\n"
 "1;2;3;4;5"))

@@ -8,6 +8,7 @@ from UI.helpUI import Ui_helpWindow
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox
 
 WINDOW_SIZE = [520, 300]
+HELP_SIZE = [600, 500]
 
 
 class DataStatistics(QMainWindow, Ui_mainWindow):
@@ -136,7 +137,7 @@ class HelpWindow(QMainWindow, Ui_helpWindow):
         super().__init__()
         self.move(1000, 300)
         self.setupUi(self)
-        self.setFixedSize(*WINDOW_SIZE)
+        self.setFixedSize(*HELP_SIZE)
 
 
 StyleSheet = '''
