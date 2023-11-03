@@ -10,7 +10,6 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-import font_resources_rc
 
 class Ui_helpWindow(object):
     def setupUi(self, helpWindow):
