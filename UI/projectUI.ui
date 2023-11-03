@@ -19,13 +19,19 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>481</width>
+      <width>508</width>
       <height>281</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="programLayout">
      <item row="1" column="0">
       <widget class="QPushButton" name="helpBtn">
+       <property name="font">
+        <font>
+         <family>Oswald</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Помощь</string>
        </property>
@@ -37,6 +43,12 @@
         <layout class="QVBoxLayout" name="outputLayout">
          <item>
           <widget class="QLabel" name="nameLabel">
+           <property name="font">
+            <font>
+             <family>Oswald</family>
+             <pointsize>17</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Введите имя файла:</string>
            </property>
@@ -60,6 +72,12 @@
          </item>
          <item>
           <widget class="QPushButton" name="saveBtn">
+           <property name="font">
+            <font>
+             <family>Oswald</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Сохранить</string>
            </property>
@@ -71,6 +89,12 @@
         <layout class="QVBoxLayout" name="inputLayout">
          <item>
           <widget class="QLabel" name="inpLabel">
+           <property name="font">
+            <font>
+             <family>Oswald</family>
+             <pointsize>17</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Выберите формат ввода:</string>
            </property>
@@ -82,6 +106,12 @@
             <layout class="QVBoxLayout" name="filesLayout">
              <item>
               <widget class="QRadioButton" name="csvFileBtn">
+               <property name="font">
+                <font>
+                 <family>Oswald</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
                <property name="text">
                 <string>Файл формата .csv</string>
                </property>
@@ -92,6 +122,12 @@
              </item>
              <item>
               <widget class="QRadioButton" name="txtFileBtn">
+               <property name="font">
+                <font>
+                 <family>Oswald</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
                <property name="text">
                 <string>Файл формата .txt</string>
                </property>
@@ -109,6 +145,12 @@
                <property name="enabled">
                 <bool>false</bool>
                </property>
+               <property name="font">
+                <font>
+                 <family>Oswald</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
                <property name="text">
                 <string>Выберите файл .csv</string>
                </property>
@@ -118,6 +160,12 @@
               <widget class="QPushButton" name="txtInput">
                <property name="enabled">
                 <bool>false</bool>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Oswald</family>
+                 <pointsize>14</pointsize>
+                </font>
                </property>
                <property name="text">
                 <string>Выберите файл .txt</string>

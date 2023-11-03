@@ -7,7 +7,7 @@ from UI.projectUI import Ui_mainWindow
 from UI.helpUI import Ui_helpWindow
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox
 
-WINDOW_SIZE = [500, 300]
+WINDOW_SIZE = [520, 300]
 
 
 class DataStatistics(QMainWindow, Ui_mainWindow):
@@ -66,7 +66,7 @@ class DataStatistics(QMainWindow, Ui_mainWindow):
             else:
                 msg = QMessageBox()
                 msg.setWindowTitle("Ошибка")
-                msg.setText("Ошибка: нет файла")
+                msg.setText("Ошибка: отсутствует файл")
                 msg.setIcon(QMessageBox.Critical)
                 msg.exec_()
         elif self.sender() == self.txtInput:
