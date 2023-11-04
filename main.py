@@ -53,9 +53,6 @@ class DataStatistics(QMainWindow, Ui_mainWindow):
                 self.btnSel[i].setEnabled(False)
 
     def get_data(self):
-
-        self.f_data = []
-
         if self.sender() == self.csvInput:
             self.file_name = QFileDialog.getOpenFileName(self, "Выберите файл", "",
                                                          "Таблица (*.csv)")[0]
@@ -139,7 +136,7 @@ class DataStatistics(QMainWindow, Ui_mainWindow):
         else:
             msg = QMessageBox()
             msg.setWindowTitle("Ошибка")
-            msg.setText("Ошибка: нет директории")
+            msg.setText("Ошибка: не выбрана директория")
             msg.setIcon(QMessageBox.Critical)
             msg.exec_()
 
