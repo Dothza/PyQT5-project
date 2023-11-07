@@ -6,6 +6,7 @@ import statistics as st
 from UI.projectUI import Ui_mainWindow
 from UI.helpUI import Ui_helpWindow
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox
+from PyQt5.QtGui import QFontDatabase
 
 WINDOW_SIZE = [520, 300]
 HELP_SIZE = [600, 500]
@@ -154,6 +155,7 @@ QMainWindow {
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+    QFontDatabase.addApplicationFont(fr"fonts/OswaldLight.ttf")
     app.setStyleSheet(StyleSheet)
     ex = DataStatistics()
     ex.show()

@@ -83,21 +83,21 @@ class Ui_helpWindow(object):
         _translate = QtCore.QCoreApplication.translate
         helpWindow.setWindowTitle(_translate("helpWindow", "Окно помощи"))
         self.saveHelp.setText(_translate("helpWindow", "Кнопка \"Сохранить\":\n"
-"Сохраняет файл с базой данных\n"
-"формата .db в виде SQL таблицы\n"
-"в файле содержатся различные\n"
-"статистические данные, исходя из\n"
-"введенных данных."))
+                                                       "Сохраняет файл с базой данных\n"
+                                                       "формата .db в виде SQL таблицы\n"
+                                                       "в файле содержатся различные\n"
+                                                       "статистические данные, исходя из\n"
+                                                       "введенных данных."))
         self.label.setText(_translate("helpWindow", "Помощь по формату ввода:"))
         self.csvHelp.setText(_translate("helpWindow", "При загрузке данных\n"
-"из .csv таблиц, используйте \",\"\n"
-"в качестве разделителя данных."))
+                                                      "из .csv таблиц, используйте \",\"\n"
+                                                      "в качестве разделителя данных."))
         self.txtHelp.setText(_translate("helpWindow", "При вводе из файла .txt\n"
-"вводите только числа,\n"
-"в качестве разделителя\n"
-"используйте знак \";\"."))
+                                                      "вводите только числа,\n"
+                                                      "в качестве разделителя\n"
+                                                      "используйте знак \";\"."))
         self.csvLabel.setText(_translate("helpWindow", "Пример таблицы формата .csv:\n"
-"title,data\n"
-"data_name,1;2;3;4;5"))
+                                                       "title,data\n"
+                                                       "data_name,1;2;3;4;5"))
         self.label_2.setText(_translate("helpWindow", "Пример таблицы формата .txt:\n"
-"1;2;3;4;5"))
+                                                      "1;2;3;4;5"))
