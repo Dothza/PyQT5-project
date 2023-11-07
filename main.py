@@ -155,7 +155,7 @@ QMainWindow {
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    QFontDatabase.addApplicationFont(fr"fonts/OswaldLight.ttf")
+    QFontDatabase.addApplicationFont("fonts/OswaldLight.ttf")
     app.setStyleSheet(StyleSheet)
     ex = DataStatistics()
     ex.show()
